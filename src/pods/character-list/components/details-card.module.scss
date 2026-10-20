@@ -1,0 +1,64 @@
+.container {
+  background: rgba(255, 255, 255, 0.452); // blanco con transparencia
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+
+  .details {
+    position: fixed;
+    box-shadow: 0 0 3px 3px $grey-700;
+    background-color: $bg-light;
+    border-radius: $radius;
+
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 98%;
+    @media (min-width: $viewport-xs) {
+      width: 500px;
+      max-width: 95%;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media (min-width: $viewport-sm) {
+      left: 50%;
+      transform: translateX(-50%);
+      width: 550px;
+      height: 300px;
+    }
+    .data {
+      padding: 0 1em;
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.5em;
+
+      .name {
+        font-weight: 900;
+        font-family: $ff-title;
+        font-size: $fs-xl;
+      }
+      .item {
+        display: flex;
+        flex-direction: column;
+
+        :first-child {
+          font-weight: 700;
+          color: $grey-900;
+        }
+        :nth-child(2) {
+          padding-left: 1em;
+        }
+      }
+    }
+  }
+}

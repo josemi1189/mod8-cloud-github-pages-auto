@@ -1,0 +1,28 @@
+.card {
+  aspect-ratio: 4/5;
+  box-shadow: 0 0 1px 1px $grey-700;
+  padding: 3em;
+  border-radius: $radius;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+
+  @media (min-width: $viewport-xs) {
+    width: 280px;
+  }
+
+  .image > img {
+    max-width: 100%;
+  }
+  .title {
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #444;
+  }
+}
+.card:hover {
+  box-shadow: inset 0 0 2px 3px $grey-700;
+}

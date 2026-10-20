@@ -1,0 +1,29 @@
+:root {
+  box-sizing: border-box;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  background-color: $background;
+  font-family: $ff-body;
+  color: $text;
+}
+
+main {
+  width: 100%;
+  max-width: 900px;
+  flex: 1;
+  margin: 0 auto;
+  padding-bottom: 1em;
+}
+
+h1 {
+  font-size: $fs-3xl;
+  text-align: center;
+  font-family: $ff-title;
+}

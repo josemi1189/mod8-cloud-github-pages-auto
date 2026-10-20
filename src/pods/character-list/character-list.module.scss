@@ -1,0 +1,35 @@
+.memberList {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 1em;
+  padding: 0em 1em 1em;
+}
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  box-shadow: 0 0 3px 3px #bbbbbb;
+  background-color: white;
+  padding: 0.5em;
+  border-radius: 5px;
+  font-size: $fs-sm;
+
+  img {
+    width: 90px;
+    border-radius: 5px;
+  }
+}
+.error,
+.info {
+  padding: 2em;
+  font-size: 1.8em;
+  font-weight: 700;
+  text-align: center;
+}
+.error {
+  color: $error;
+}
+.info {
+  color: $info;
+}

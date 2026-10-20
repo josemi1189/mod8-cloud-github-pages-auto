@@ -1,0 +1,43 @@
+.capitalize {
+  text-transform: capitalize;
+}
+
+.headRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: 1.4em;
+  font-weight: 600;
+  padding: 1em 0;
+  text-align: center;
+}
+.memberList {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 1em;
+  padding: 0em 1em 1em;
+}
+.rowData {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 5em;
+  align-items: center;
+  justify-items: center;
+  box-shadow: 0 0 3px 3px $grey-700;
+  background-color: white;
+  padding: 0.5em;
+  border-radius: 5px;
+
+  @media (max-width: $viewport-sm) {
+    max-width: 90%;
+  }
+
+  img {
+    width: 90px;
+    border-radius: 5px;
+  }
+}
+.error {
+  padding: 2em;
+  font-size: 1.8em;
+  font-weight: 700;
+  text-align: center;
+}

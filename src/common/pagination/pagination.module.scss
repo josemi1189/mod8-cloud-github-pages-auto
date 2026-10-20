@@ -1,0 +1,43 @@
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  .buttonsPage {
+    display: flex;
+    flex-direction: row;
+    gap: 0.3em;
+  }
+}
+
+.active {
+  background-color: $grey-700;
+}
+.button,
+.active,
+.arrow {
+  border-radius: 100%;
+  padding: 0.8em 1em;
+  border: none;
+  font-size: 1.1em;
+  cursor: pointer;
+  color: $info;
+
+  &:hover {
+    background-color: rgb(226, 226, 226);
+  }
+}
+.emptyButton {
+  cursor: auto;
+  border: none;
+  padding: 0.8em 1em;
+  font-size: 1.1em;
+  color: $info;
+}
+.arrow:disabled {
+  cursor: auto;
+  color: $grey-700;
+  &:hover {
+    background-color: transparent;
+  }
+}
