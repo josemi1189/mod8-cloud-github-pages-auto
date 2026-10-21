@@ -32,4 +32,7 @@ jobs:
         run: pnpm run build
 
       - name: Deploy
-        run: pnpm run deploy -- -r git@github.com:josemi1189/mod8-cloud-github-pages-auto.git
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.SSH_PRIVATE_KEY }}
+          publish_dir: ./dir
