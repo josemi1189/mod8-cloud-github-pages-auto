@@ -10,6 +10,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v7
 
+      - name: Instalar y configurar pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 12
       - name: Use SSH Key
         run: |
           mkdir -p ~/.ssh   
