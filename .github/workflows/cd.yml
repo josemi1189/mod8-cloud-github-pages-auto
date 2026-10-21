@@ -22,9 +22,7 @@ jobs:
         uses: actions/checkout@v7
 
       - name: Instalar y configurar pnpm
-        uses: pnpm/action-setup@v6
-        with:
-          version: 9
+        uses: pnpm/action-setup@v4
 
       - name: Configurar Node.js
         uses: actions/setup-node@v7
