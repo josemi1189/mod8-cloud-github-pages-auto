@@ -23,6 +23,8 @@ jobs:
 
       - name: Instalar y configurar pnpm
         uses: pnpm/action-setup@v4
+        with:
+          version: 12.9.1
 
       - name: Configurar Node.js
         uses: actions/setup-node@v7
