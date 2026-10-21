@@ -1,0 +1,31 @@
+name: CD Github Pages
+on:
+  push:
+    branches: main
+
+jobs:
+  deploy-github-auto:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Use SSH Key
+        run: |
+          mkdir -p ~/.ssh   
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          sudo chmod 600 ~/.ssh/id_rsa
+
+      - name: Git config
+        run: |
+          git config --global user.email "jose1189@gmail.com"
+          git config --global user.name "José Miguel"
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build
+        run: pnpm run build
+
+      - name: Deploy
+        run: pnpm run deploy -- -r git@github.com:josemi1189/mod8-cloud-github-pages-auto.git
